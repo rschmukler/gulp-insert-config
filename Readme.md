@@ -9,7 +9,7 @@ npm i gulp-insert-config
 ## Usage
 
 config.json
-```
+```js
 {
   "AWS_BUCKET": "my-bucket",
   "development": {
@@ -25,7 +25,7 @@ config.json
 
 gulpfile.js
 
-```
+```js
 var insertConfig = require('gulp-insert-config');
 var config = require('./config.json');
 
@@ -35,7 +35,7 @@ gulp.src('app.js')
 
 app.js
 
-```
+```js
 var config = JSON.parse("{{ MY_CFG }}");
 console.log(config);
 
